@@ -1,0 +1,10 @@
+{
+	"slacktoken": "xoxb-2662749517184-2625496413255-dtHAn4Zqn9dBQUROwBX0IDkK",
+	"slackname": "ddosguard2",
+	"telegramtoken": "2072782502:AAF7PdEg_X1Qic5MFzTim5WZepk_74_q-HQ",
+	"vktoken": "6f82014fda02c60dbe33d6012e507874d2e44298ad9d746beb2d728f3c12254351724252e912d29cef694",
+	"vkid": "2000000002",
+	"slackchatid": "C02KGN3M6RE",
+	"telegramid": "-1001574677068",
+	"mongoUrl": "mongodb+srv://root:root@cluster0.cwwgk.mongodb.net/Hackaton?retryWrites=true&w=majority"
+}
