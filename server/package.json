@@ -1,0 +1,31 @@
+{
+  "name": "send_notice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiskisnotdead/Hackaton2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiskisnotdead/Hackaton2021/issues"
+  },
+  "homepage": "https://github.com/kiskisnotdead/Hackaton2021#readme",
+  "dependencies": {
+    "concurrently": "^6.3.0",
+    "config": "^3.3.6",
+    "mongoose": "^6.0.12",
+    "node-telegram-bot-api": "^0.54.0",
+    "node-vk-bot-api": "^3.5.0",
+    "slackbots": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
