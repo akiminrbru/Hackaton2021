@@ -4,19 +4,23 @@ const Notice = require('./models/Notice')
 const {botVk, bot, botSlack} = require('./bots/botConnect')
 
 async function start() {
-	await mongoose.connect(config.mongoUrl, {
-		useNewUrlParser: true,
-		useUnifiedTopology: true
-	});
+	try {
+		await mongoose.connect(config.mongoUrl, {
+			useNewUrlParser: true,
+			useUnifiedTopology: true
+		});
+		
+		const data = await Notice.find() //{"timestamp": { $gt: new Date(Date.now() - 60*60 * 1000) }}
 	
-	const data = await Notice.find() //{"timestamp": { $gt: new Date(Date.now() - 60*60 * 1000) }}
-
-	if (data.length == 0) {
-		return console.log("Данные не обнаружены")
-	}
-
-	for (let i = 0; i < data.length; i++) { 
-		sendMsg(data[i])
+		if (data.length == 0) {
+			return console.log("Данные не обнаружены")
+		}
+	
+		for (let i = 0; i < data.length; i++) { 
+			sendMsg(data[i])
+		}
+	} catch(e) {
+		console.log(e)
 	}
 }
 
